@@ -5,7 +5,9 @@ import { $env } from "./config";
 (async () => {
   try {
     await sequelize.authenticate();
-    await sequelize.sync();
+    await sequelize.sync({
+      logging: console.log,
+    });
     console.log("Database connection successfully.");
 
     const server = app.listen($env.PORT, () => {

@@ -8,7 +8,6 @@ const sequelize = new Sequelize({
   port: Number($env.POSTGRESS_PORT),
   username: $env.POSTGRES_USER,
   password: $env.POSTGRESS_PASSWORD,
-  // models: [__dirname + "/models"],
 });
 
 export default sequelize;
